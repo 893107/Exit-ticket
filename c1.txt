@@ -1,0 +1,24 @@
+1일차 회의록
+
+자료 공유 플랫폼 : git
+세진님 금일 회의록 Main branch Upload 진행
+git 전략회의 ( 10분 예정 명일 : 세부 전략은 git 특강 수강 이 후  )
+
+개발 Tool
+eclipse , html , VSC ( prototy html 제작 시 )
+DB 사용 시 mysql , Oracle ? 선택하기
+
+파트분배 - 1일차 회의한 Format으로 개인의 html 문서작성
+문서내의 text upload는 비동기로 진행
+비동기 ajax . Axios 중 선택
+
+1차 목표
+자기 소개 플랫폼에 버튼 클릭 시 JSON Data로 간략한 정보 노출
+
+추후 목표는 완성도에 따라 회의 후 유동적으로 결정
+
+현황:
+현재 Main index -> controller Servlet 제작완료 ( 예외처리 미구성 ) -> 개인.html 문서 생성
+
+참조 URL : https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_coming_soon&stacked=h
+참조 URL: https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_cv&stacked=h
