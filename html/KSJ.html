@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>KSJ Profile</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+
+html,body,h1,h3,h4,h5,h6 {
+  font-family: "Roboto", sans-serif;
+}
+h2{
+  font-family: "Roboto", sans-serif;
+  color: black;
+}
+.btn{
+  background-color: transparent;
+  border: 0px;
+}
+#footer{
+  color: rgb(179, 145, 44);
+}
+</style>
+</head>
+<body class="w3-light-grey">
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <img src="images/download.jpg" style="width:100%" alt="Avatar">
+          <div class="w3-display-bottomleft w3-container w3-text-black">
+            <h2>SeJin Kim</h2>
+          </div>
+        </div> 
+        <div class="w3-container">
+          <p><i class="fa fa-briefcase img1 fa-fw w3-margin-right w3-large" style="color: rgb(85, 242, 195);"></i>공부중</p>
+          <p><i class="fa fa-home fa-fw w3-margin-right w3-large" style="color: rgb(85, 242, 195);"></i>서울, 대한민국</p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large" style="color: rgb(85, 242, 195);"></i>-----@gamil.com</p>
+          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large" style="color: rgb(85, 242, 195);"></i>010-9xxx-xxxx</p>
+          <hr>
+
+          <!-- % 막대 수정 -->
+          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right" style="color: rgb(85, 242, 195);"></i>Programming Skills</b></p>
+          <p>Java</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3" style="width:30%; background-color: rgb(85, 242, 195);">
+              <div class="w3-center w3-text-white">20%</div>
+            </div>
+          </div>
+          <p>Java Script</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3" style="width:40%; background-color: rgb(85, 242, 195);">
+              <div class="w3-center w3-text-white">30%</div>
+            </div>
+          </div>
+          <p>Oracle</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3" style="width:20%; background-color: rgb(85, 242, 195);">
+              <div class="w3-center w3-text-white">0%</div>
+            </div>
+          </div>
+          <p>MySQL</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3" style="width:25%; background-color: rgb(85, 242, 195);">
+              <div class="w3-center w3-text-white">20%</div>
+            </div>
+          </div>
+          <br>
+
+          <!-- <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
+          <p>English</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
+          </div>
+          <p>Spanish</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-round-xlarge w3-teal" style="height:24px;width:55%"></div>
+          </div>
+          <p>German</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-round-xlarge w3-teal" style="height:24px;width:25%"></div>
+          </div>
+          <br> -->
+        </div>
+      </div><br>
+
+    <!-- End Left Column -->
+    </div>
+   
+    <!-- Right Column -->
+    <div class="w3-twothird">
+    
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa-solid fa-circle-info w3-margin-right" style="color: rgb(85, 242, 195);"></i>Introduce</h2>
+        <div class="w3-container" >
+          <h5 class="w3-opacity"><b>간단하게 소개를 해볼까 합니다.</b>
+          <!-- <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right" style="color: black;"> </h6> -->
+          <button id="intro" class="btn" onclick='loadDoc()'><i class="fa-solid fa-comment" style="color: rgb(85, 242, 195);"></i></button></h5>
+          
+          <p id = intro1></p>
+          <script type="text/javascript">
+
+          function loadDoc() {
+  				console.log("loadDoc() 호출");
+          const xhttp = new XMLHttpRequest();
+
+            xhttp.onload = function(){
+          
+            console.log("실행 시점 *********");
+            let res_data = this.responseText;
+            document.getElementById("intro1").innerHTML = res_data;
+            //alert(res_data);
+            }
+
+          xhttp.open("POST", "sjtext1.jsp", true);
+          xhttp.send();
+          }
+          	
+          </script>
+          </h6>
+          <p id = intro1></p>
+          <hr>
+        </div>
+
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>프로젝트에 임하는 각오</b>
+          <button id="intro" class="btn" onclick='loadDoc2()'><i class="fa-solid fa-comment" style="color: rgb(85, 242, 195);"></i></button></h5>
+          <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+          <script type="text/javascript">
+          
+          function loadDoc2() {
+			     console.log("loadDoc2() 호출" );
+      		  axios('sjtext2.jsp')
+      		  
+      		  .then(function (response) { 
+      			document.getElementById("intro2").innerHTML = response.data;
+      			//alert(response.data);
+      		  })
+      		  
+      		  .catch(function (error) {
+      		    console.log('---- ', error);
+      		  });
+          }
+          </script>
+          <p id = intro2></p>
+          <hr>
+        </div>
+        
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>팀원들에게</b>
+          <button id="intro" class="btn" onclick='loadDoc3()'><i class="fa-solid fa-comment" style="color: rgb(85, 242, 195);"></i></button></h5>
+          
+          <p id = intro3></p>
+          <script type="text/javascript">
+
+          function loadDoc3() {
+  				console.log("loadDoc3() 호출");
+          const xhttp = new XMLHttpRequest();
+
+            xhttp.onload = function(){
+          
+            console.log("실행 시점 *********");
+            let res_data = this.responseText;
+            document.getElementById("intro3").innerHTML = res_data;
+            //alert(res_data);
+            }
+
+          xhttp.open("POST", "sjtext3.jsp", true);
+          xhttp.send();
+          }
+          </script>
+          </h6>
+          <p id = intro3></p>
+          <hr>
+        </div>
+      </div>
+
+      <!-- Education  -->
+      <div class="w3-container w3-card w3-white">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa-solid fa-address-card w3-margin-right" style="color: rgb(85, 242, 195);"></i>More Profile</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>- Move To KJW's Profile</b></h5>
+          
+          <p id = imageKJW>"김진원" 님 프로필 구경하기 
+            <button class="btn" onclick="location.href='KJW.html'" style="color: rgb(85, 242, 195);"><i class="fa-solid fa-compact-disc"></i></button></p>
+        </div>
+        <hr>
+
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>- Move To LGY's Profile</b></h5>
+          
+          <p id = imageLGY>"임가영" 님 프로필 구경하기 
+            <button class="btn" onclick="location.href='LGY.html'" style="color: rgb(85, 242, 195);"><i class="fa-solid fa-atom"></i></button></p>
+          <br>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>- Move To Main</b></h5>
+          
+          <p id = imageKJW>Main 화면으로 이동하기 
+            <button class="btn" onclick="location.href='main.html'" style="color: rgb(85, 242, 195);"><i class="fa-solid fa-person-chalkboard"></i></button></p>
+          <br>
+        </div>
+      </div>
+      <hr>
+
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+</body>
+
+
+<footer class="w3-container w3 w3-center w3-margin-top" style="background-color: rgb(85, 242, 195);">
+  <br>
+  <div class="w3-center w3-text-white">SNS Link</div>
+  <i class="fa-brands fa-github" style="color: white;"></i>
+  <i class="fa-brands fa-instagram" style="color: white;"></i>
+  <i class="fa-brands fa-facebook" style="color: white;"></i>
+  <p style="color: white;">Join us <a href="https://github.com/893107/mini-project.git" target="_blank">github</a></p>
+</footer>
+
+</html>
