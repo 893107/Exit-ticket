@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- 
+	https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-factory-collaborators
+	 -->
+	<!-- Spring bean으로 등록하는 tag -->
+	
+	<!-- step01 
+		- 설정 파일이 실행되면서 로딩시에 해당 객체를 기본 생성자 호출하면서 자동 생성
+		- scope 속성이 생략된 형태는 scope="singleton"
+		- 다수의 getBean() 호출시에도 이미 생성된 하나의 bean 객체가 공유되는 개념
+	-->
+	<bean id="p1" class="setp01.model.domain.People"/>
+	
+	<!--step 02
+		- scope ="prototype" 추가
+		- container 생성시 spring bean이 자동 생성되지는 않음
+		- getBean()호출시에만 spring bean 객체 생성
+		- 실행시 별도의 spring bean 객체가 생성되어야 하는 로직인경우 scope="prototype"
+	  -->
+	<bean id="p2" class="setp01.model.domain.People" scope="prototype"/>
+	
+	<!-- step03
+		-public People(String name, int age) 생성자 호출 설정
+	 -->
+	 <bean id="p3" class="setp01.model.domain.People" scope="prototype">
+	 	<constructor-arg name="name" value="재석"/>
+	 	<constructor-arg name="age" value="40"/>
+	 </bean>
+	 
+	 
+	 <!-- step04
+		-public People(String name, int age) 생성자 호출 설정
+	 -->
+	 <bean id="p4" class="setp01.model.domain.People" scope="prototype">
+	 	<constructor-arg index="0" value="연아"/>
+	 	<constructor-arg index="1" value="30"/>
+	 </bean>
+	 
+	 <!-- step05
+		-public People(String name, int age) 생성자 호출 설정
+	 -->
+	 <bean id="p5" class="setp01.model.domain.People" scope="prototype">
+	 	<constructor-arg type="String" value="동엽"/>
+	 	<constructor-arg type="int" value="50"/>
+	 </bean>
+	 
+	 
+	 <!-- step06
+		-public People() 생성자 호출 -> setXxx() 호출
+	 -->
+	 <bean id="p6" class="setp01.model.domain.People" scope="prototype">
+	 	<property name="name" value="박세리" /> <!-- setName("박세리") 코드와 동일 -->
+	 	<property name="age" value="51" />
+	 </bean>
+	 
+</beans>
